@@ -1,9 +1,4 @@
-#-*- coding: utf-8 -*-
-'''
-Created on 2015-06-22
-
-@author: Lockvictor
-'''
+"user_based collaborative filtering"
 import sys, random, math
 from operator import itemgetter
 
