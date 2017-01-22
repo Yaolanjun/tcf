@@ -81,7 +81,8 @@ class ItemBasedCF():
         sum1=sqrt(sum1sq)
         sum2=sqrt(sum2sq)
 
-        sum_of_item=sum([self.trans_prefs[item1][user]*self.trans_prefs[item2][user] for user in si])
+        sum_of_item=sum([self.trans_prefs[item1][user]\
+                         *self.trans_prefs[item2][user] for user in si])
 
         return sum_of_item/float(sum1*sum2)
 
@@ -99,7 +100,8 @@ class ItemBasedCF():
                 sim_matrix[item][other]=self.cos_sim(item,other)
 
             #sort the similarity
-            self.sim_mat[item]=sorted(sim_matrix[item].iteritems(),key=lambda b:b[1],reverse=True)
+            self.sim_mat[item]=sorted(sim_matrix[item].iteritems(),\
+                                      key=lambda b:b[1],reverse=True)
 
         print "have finished calculate the similarity matrix"
 
@@ -130,8 +132,8 @@ class ItemBasedCF():
         total=0.0
 
         for user in self.testset.keys():
+            if user not in self.trainset: continue
             for item in self.testset[user].keys():
-		 if user not in self.trainset:continue
                 total=total+1
 
                 if item not in self.sim_mat.keys():
@@ -142,7 +144,7 @@ class ItemBasedCF():
                     n=n+1
                     sum_r=pow(self.testset[user][item]-rating,2)
         print "the coverage is ",n/total
-        print "the rmse is",sqrt(sum_r/n)
+        print "the rmse is %f"% sqrt(sum_r/float(n))
 
 
 

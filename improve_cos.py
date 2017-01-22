@@ -147,8 +147,8 @@ class ItemBasedCF():
         total=0.0
 
         for user in self.testset.keys():
+            if user not in self.trainset: continue
             for item in self.testset[user].keys():
-		 if user not in self.trainset:continue
                 total=total+1
 
                 if item not in self.sim_mat.keys():
@@ -158,7 +158,7 @@ class ItemBasedCF():
                 if rating!=0.0:
                     n=n+1
                     sum_r=pow(self.testset[user][item]-rating,2)
-        print "the coverage is ",n/total
+        print "the coverage is ", n
         print "the rmse is",sqrt(sum_r/n)
 
 
