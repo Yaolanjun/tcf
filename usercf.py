@@ -57,6 +57,8 @@ class UserBasedCF():
         fp.close()
         print >> sys.stderr, 'test set = %s' % testset_len
 
+
+    '''calculate the similarity of the two users'''
     def cos_sim(self, user1, user2):
         si = {}
         for item in self.trainset[user1]:
@@ -90,8 +92,8 @@ class UserBasedCF():
 
         print "have finished calculate the similarity matrix"
 
-    '''predict the ratings'''
 
+    '''predict the ratings'''
     def predict_rating(self, user, item):
         r = 0.0
         totalsim = 0.0
@@ -107,8 +109,8 @@ class UserBasedCF():
 
         return r / totalsim
 
-    '''evaluate the performance with the RMSE'''
 
+    '''evaluate the performance with the RMSE'''
     def rmse(self):
         n = 0.0
         sum_r = 0.0
