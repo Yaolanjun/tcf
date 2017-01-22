@@ -114,6 +114,7 @@ class ItemBasedCF():
             other=self.sim_mat[item][i][0]
             if other in self.trainset[user].keys():
                 r=r+self.trainset[user][other]*self.sim_mat[item][i][1]
+		totalsim=totalsim+self.sim_mat[item][i][1]
 
         '''cannot predict the rating if totalsim equals 0.0, return 0.0 '''
         if totalsim==0.0: return 0.0
@@ -130,6 +131,7 @@ class ItemBasedCF():
 
         for user in self.testset.keys():
             for item in self.testset[user].keys():
+		 if user not in self.trainset:continue
                 total=total+1
 
                 if item not in self.sim_mat.keys():
