@@ -11,7 +11,7 @@ class UserBasedCF():
         self.trainset = {}
         self.testset = {}
 
-        self.n_sim_user = 20
+        self.n_sim_user = 50
 
         self.sim_mat = {}
         #self.movie_popular = {}
@@ -73,6 +73,7 @@ class UserBasedCF():
 
         sum_of_item = sum([self.trainset[user1][item] * self.trainset[user2][item] for item in si])
 
+
         return sum_of_item / float(sum1 * sum2)
 
 
@@ -85,7 +86,8 @@ class UserBasedCF():
             sim_matrix.setdefault(user, {})
             for other in self.trainset:
                 if other == user: continue
-                sim_matrix[user][other] = self.cos_sim(user, other)
+                if self.cos_sim(user,other)!=0.0:
+                    sim_matrix[user][other] = self.cos_sim(user, other)
 
             # sort the similarity
             self.sim_mat[user] = sorted(sim_matrix[user].iteritems(), key=lambda b: b[1], reverse=True)
@@ -121,14 +123,14 @@ class UserBasedCF():
             for item in self.testset[user].keys():
                 total = total + 1
 
-                if item not in self.sim_mat.keys():
+                if user not in self.sim_mat.keys():
                     continue
-                rating = self.predict_rating(user, item)
 
+                rating = self.predict_rating(user, item)
                 if rating != 0.0:
                     n = n + 1
-                    sum_r = pow(self.testset[user][item] - rating, 2)
-        print "the coverage is ", n / total
+                    sum_r = sum_r+pow(self.testset[user][item] - rating, 2)
+        print "the coverage is ", n /total
         print "the rmse is", sqrt(sum_r / n)
 
 
@@ -136,10 +138,10 @@ class UserBasedCF():
 if __name__ == '__main__':
     trainfile = r'test1/train_rating.txt'
     testfile  = r'test1/train_rating.txt'
-    itemcf = UserBasedCF()
-    itemcf.load_train_data(trainfile)
-    itemcf.load_test_data(testfile)
-    itemcf.get_sim_matrix()
-    itemcf.rmse()
+    usercf = UserBasedCF()
+    usercf.load_train_data(trainfile)
+    usercf.load_test_data(testfile)
+    usercf.get_sim_matrix()
+    usercf.rmse()
 
 
