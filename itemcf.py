@@ -11,7 +11,7 @@ class ItemBasedCF():
         self.testset = {}
         self.trans_prefs={}
 
-        self.n_sim_movie = 20
+        self.n_sim_movie = 800
 
         self.sim_mat = {}
         #self.movie_count = 0
@@ -45,6 +45,7 @@ class ItemBasedCF():
         line = fp.readline()
         testset_len = 0
         while line != '':
+            line.strip('\r\n')
             user,item,rating,time=line.split(',')
             self.testset.setdefault(user, {})
             self.testset[user][item] = float(rating)
@@ -57,15 +58,13 @@ class ItemBasedCF():
     '''transform the prefs'''
 
     def transform(self):
-        result = {}
         for user in self.trainset:
             for item in self.trainset[user]:
-                result.setdefault(item, {})
-                result[item][user] = self.trainset[user][item]
+                self.trans_prefs.setdefault(item, {})
+                self.trans_prefs[item][user] = self.trainset[user][item]
 
         print "finish transform the prefs"
 
-        return result
 
 
     '''calculate the similarity of the two item'''
@@ -91,7 +90,7 @@ class ItemBasedCF():
     '''get the simlarity matrix of item'''
     def get_sim_matrix(self):
         sim_matrix={}
-        self.trans_prefs=self.transform()
+        self.transform()
 
         for item in self.trans_prefs:
             sim_matrix.setdefault(item, {})
@@ -116,7 +115,8 @@ class ItemBasedCF():
             other=self.sim_mat[item][i][0]
             if other in self.trainset[user].keys():
                 r=r+self.trainset[user][other]*self.sim_mat[item][i][1]
-		totalsim=totalsim+self.sim_mat[item][i][1]
+
+                totalsim=totalsim+self.sim_mat[item][i][1]
 
         '''cannot predict the rating if totalsim equals 0.0, return 0.0 '''
         if totalsim==0.0: return 0.0
@@ -142,7 +142,7 @@ class ItemBasedCF():
 
                 if rating!=0.0:
                     n=n+1
-                    sum_r=pow(self.testset[user][item]-rating,2)
+                    sum_r=sum_r+pow(self.testset[user][item]-rating,2)
         print "the coverage is ",n/total
         print "the rmse is %f"% sqrt(sum_r/float(n))
 
