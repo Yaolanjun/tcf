@@ -10,24 +10,14 @@ class ItemBasedCF():
         self.trainset = {}
         self.testset = {}
         self.trans_prefs={}
-
         self.user_ave={}
-        self.n_sim_movie = 20
+
+        self.n_sim_movie = 800
 
         self.sim_mat = {}
         #self.movie_count = 0
 
         print >> sys.stderr, 'Similar movie number = %d' % self.n_sim_movie
-
-
-    '''calculate the average ratings of the users'''
-    def cal_user_ave(self):
-        for user in  self.trainset:
-            sum_ratings=0.0
-            for item in self.trainset[user]:
-                sum_ratings+=self.trainset[user][item]
-            self.user_ave[user]= sum_ratings/float(len(self.trainset[user]))
-
 
 
     '''load the trainset'''
@@ -44,11 +34,19 @@ class ItemBasedCF():
             trainset_len += 1
             line=fp.readline()
 
-        self.cal_user_ave()
         fp.close()
         print >> sys.stderr, 'train set = %s' % trainset_len
 
+    '''calculate the average rating of user'''
+    def calculate_ave(self):
+        for user in self.trainset:
+            sum=0.0
+            n=0
+            for item in self.trainset[user]:
+                sum=sum+self.trainset[user][item]
+                n=n+1
 
+            self.user_ave[user]=sum/n
 
     '''load the testset'''
     def load_test_data(self,filename):
@@ -57,6 +55,7 @@ class ItemBasedCF():
         line = fp.readline()
         testset_len = 0
         while line != '':
+            line.strip('\r\n')
             user,item,rating,time=line.split(',')
             self.testset.setdefault(user, {})
             self.testset[user][item] = float(rating)
@@ -69,15 +68,13 @@ class ItemBasedCF():
     '''transform the prefs'''
 
     def transform(self):
-        result = {}
         for user in self.trainset:
             for item in self.trainset[user]:
-                result.setdefault(item, {})
-                result[item][user] = self.trainset[user][item]
+                self.trans_prefs.setdefault(item, {})
+                self.trans_prefs[item][user] = self.trainset[user][item]
 
         print "finish transform the prefs"
 
-        return result
 
 
     '''calculate the similarity of the two item'''
@@ -88,17 +85,15 @@ class ItemBasedCF():
 
         if len(si)==0:return 0.0
 
-        sum1sq=sum([pow(self.trans_prefs[item1][user]-self.user_ave[user],2)\
-                    for user in si])
-        sum2sq=sum([pow(self.trans_prefs[item2][user]-self.user_ave[user],2)\
-                    for user in si])
+        sum1sq=sum([pow(self.trans_prefs[item1][user]-self.user_ave[user],2) for user in si])
+        sum2sq=sum([pow(self.trans_prefs[item2][user]-self.user_ave[user],2) for user in si])
         sum1=sqrt(sum1sq)
         sum2=sqrt(sum2sq)
 
         sum_of_item=sum([(self.trans_prefs[item1][user]-self.user_ave[user])\
                          *(self.trans_prefs[item2][user]-self.user_ave[user])\
                          for user in si])
-
+        if sum1*sum2==0.0:return 1.0
         return sum_of_item/float(sum1*sum2)
 
 
@@ -106,7 +101,7 @@ class ItemBasedCF():
     '''get the simlarity matrix of item'''
     def get_sim_matrix(self):
         sim_matrix={}
-        self.trans_prefs=self.transform()
+        self.transform()
 
         for item in self.trans_prefs:
             sim_matrix.setdefault(item, {})
@@ -131,7 +126,8 @@ class ItemBasedCF():
             other=self.sim_mat[item][i][0]
             if other in self.trainset[user].keys():
                 r=r+self.trainset[user][other]*self.sim_mat[item][i][1]
-		totalsim=totalsim+self.sim_mat[item][i][1]
+
+                totalsim=totalsim+self.sim_mat[item][i][1]
 
         '''cannot predict the rating if totalsim equals 0.0, return 0.0 '''
         if totalsim==0.0: return 0.0
@@ -157,9 +153,9 @@ class ItemBasedCF():
 
                 if rating!=0.0:
                     n=n+1
-                    sum_r=pow(self.testset[user][item]-rating,2)
-        print "the coverage is ", n
-        print "the rmse is",sqrt(sum_r/n)
+                    sum_r=sum_r+pow(self.testset[user][item]-rating,2)
+        print "the coverage is ",n/total
+        print "the rmse is %f"% sqrt(sum_r/float(n))
 
 
 
@@ -168,8 +164,7 @@ if __name__ == '__main__':
     testfile  = r'test1/train_rating.txt'
     itemcf = ItemBasedCF()
     itemcf.load_train_data(trainfile)
+    itemcf.calculate_ave()
     itemcf.load_test_data(testfile)
     itemcf.get_sim_matrix()
     itemcf.rmse()
-
-
