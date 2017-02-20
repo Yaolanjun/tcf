@@ -11,7 +11,7 @@ class UserBasedCF():
         self.trainset = {}
         self.testset = {}
 
-        self.n_sim_user = 50
+        self.n_sim_user = 500
 
         self.sim_mat = {}
         #self.movie_popular = {}
