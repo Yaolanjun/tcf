@@ -154,6 +154,7 @@ if __name__ == '__main__':
     itemcf = ItemBasedCF()
     itemcf.load_train_data(trainfile)
     itemcf.load_test_data(testfile)
+
     itemcf.get_sim_matrix()
     itemcf.rmse()
 
