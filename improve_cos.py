@@ -153,9 +153,11 @@ class ItemBasedCF():
 
                 if rating!=0.0:
                     n=n+1
-                    sum_r=sum_r+pow(self.testset[user][item]-rating,2)
+                    #sum_r = sum_r + abs(self.testset[user][item] - rating)
+                    sum_r = sum_r+pow(self.testset[user][item]-rating,2)
         print "the coverage is ",n/total
         print "the rmse is %f"% sqrt(sum_r/float(n))
+        #print "the mse is %f" % (sum_r / n)
 
 
 
