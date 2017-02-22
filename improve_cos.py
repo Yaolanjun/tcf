@@ -118,11 +118,16 @@ class ItemBasedCF():
 
 
     '''predict the ratings'''
-    def predict_rating(self,user,item):
+    def predict_rating(self,user,item,nn):
         r=0.0
         totalsim=0.0
 
-        for i in range(self.n_sim_movie):
+        self.n_sim_movie=nn
+
+        for i in range(nn):
+
+            if i>=len(self.sim_mat[item]):break
+
             other=self.sim_mat[item][i][0]
             if other in self.trainset[user].keys():
                 r=r+self.trainset[user][other]*self.sim_mat[item][i][1]
@@ -137,7 +142,7 @@ class ItemBasedCF():
 
 
     '''evaluate the performance with the RMSE'''
-    def rmse(self):
+    def rmse(self,nn,filename):
         n=0.0
         sum_r=0.0
         total=0.0
@@ -149,12 +154,21 @@ class ItemBasedCF():
 
                 if item not in self.sim_mat.keys():
                     continue
-                rating=self.predict_rating(user,item)
+                rating=self.predict_rating(user,item,nn)
 
                 if rating!=0.0:
                     n=n+1
                     #sum_r = sum_r + abs(self.testset[user][item] - rating)
                     sum_r = sum_r+pow(self.testset[user][item]-rating,2)
+        
+
+        out=open(filename,'a')
+        out.write("the number of neighbour is: "+str(self.n_sim_movie))        
+        out.write("the coverage is :"+str(n/total))
+        out.write("\nthe rmse is: "+str(sqrt(sum_r/float(n))))
+        out.write("\n\n\n\n")
+        out.close()
+        
         print "the coverage is ",n/total
         print "the rmse is %f"% sqrt(sum_r/float(n))
         #print "the mse is %f" % (sum_r / n)

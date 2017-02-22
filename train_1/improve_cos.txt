@@ -1,0 +1,60 @@
+the number of neighbour is: 20the coverage is :0.10243902439
+the rmse is: 1.49987662192
+
+
+
+the number of neighbour is: 50the coverage is :0.165959703075
+the rmse is: 1.44769476298
+
+
+
+the number of neighbour is: 70the coverage is :0.197879109226
+the rmse is: 1.43544312586
+
+
+
+the number of neighbour is: 100the coverage is :0.292152704136
+the rmse is: 1.35815327633
+
+
+
+the number of neighbour is: 200the coverage is :0.647083775186
+the rmse is: 1.17691738044
+
+
+
+the number of neighbour is: 300the coverage is :0.876776246023
+the rmse is: 1.08461491113
+
+
+
+the number of neighbour is: 400the coverage is :0.96479321315
+the rmse is: 1.03741615433
+
+
+
+the number of neighbour is: 500the coverage is :0.990455991516
+the rmse is: 1.00576775086
+
+
+
+the number of neighbour is: 600the coverage is :0.996818663839
+the rmse is: 0.992311885345
+
+
+
+the number of neighbour is: 700the coverage is :0.998515376458
+the rmse is: 0.987762649133
+
+
+
+the number of neighbour is: 800the coverage is :0.999045599152
+the rmse is: 0.9869043722
+
+
+
+the number of neighbour is: 900the coverage is :0.99915164369
+the rmse is: 1.00131251383
+
+
+
