@@ -1,0 +1,504 @@
+
+
+
+
+0.4the number of neighbour is: 10
+the coverage is :0.998621420997
+the rmse is: 0.987258683356
+
+the number of neighbour is: 20
+the coverage is :0.998515376458
+the rmse is: 0.987040509717
+
+the number of neighbour is: 30
+the coverage is :0.998515376458
+the rmse is: 0.987056315475
+
+the number of neighbour is: 40
+the coverage is :0.998409331919
+the rmse is: 0.98698247376
+
+the number of neighbour is: 50
+the coverage is :0.998409331919
+the rmse is: 0.986962517635
+
+the number of neighbour is: 60
+the coverage is :0.998409331919
+the rmse is: 0.986942959416
+
+the number of neighbour is: 70
+the coverage is :0.998515376458
+the rmse is: 0.986913028022
+
+the number of neighbour is: 80
+the coverage is :0.998515376458
+the rmse is: 0.986871825275
+
+the number of neighbour is: 90
+the coverage is :0.998409331919
+the rmse is: 0.986851964101
+
+the number of neighbour is: 100
+the coverage is :0.998409331919
+the rmse is: 0.986852775983
+
+the number of neighbour is: 110
+the coverage is :0.998409331919
+the rmse is: 0.986848644552
+
+the number of neighbour is: 120
+the coverage is :0.998409331919
+the rmse is: 0.986842885863
+
+the number of neighbour is: 130
+the coverage is :0.998409331919
+the rmse is: 0.986854739893
+
+the number of neighbour is: 140
+the coverage is :0.998409331919
+the rmse is: 0.986830703685
+
+the number of neighbour is: 150
+the coverage is :0.998409331919
+the rmse is: 0.986841344834
+
+the number of neighbour is: 160
+the coverage is :0.998409331919
+the rmse is: 0.986851562886
+
+the number of neighbour is: 200
+the coverage is :0.998409331919
+the rmse is: 0.98685801099
+
+
+
+
+
+0.5the number of neighbour is: 10
+the coverage is :0.998621420997
+the rmse is: 0.987288443662
+
+the number of neighbour is: 20
+the coverage is :0.998515376458
+the rmse is: 0.987045606802
+
+the number of neighbour is: 30
+the coverage is :0.998515376458
+the rmse is: 0.987040641958
+
+the number of neighbour is: 40
+the coverage is :0.998409331919
+the rmse is: 0.986995878755
+
+the number of neighbour is: 50
+the coverage is :0.998409331919
+the rmse is: 0.986894048756
+
+the number of neighbour is: 60
+the coverage is :0.998409331919
+the rmse is: 0.986912726859
+
+the number of neighbour is: 70
+the coverage is :0.998515376458
+the rmse is: 0.986864978946
+
+the number of neighbour is: 80
+the coverage is :0.998515376458
+the rmse is: 0.986846921345
+
+the number of neighbour is: 90
+the coverage is :0.998409331919
+the rmse is: 0.986864059301
+
+the number of neighbour is: 100
+the coverage is :0.998409331919
+the rmse is: 0.986822412199
+
+the number of neighbour is: 110
+the coverage is :0.998409331919
+the rmse is: 0.986832156595
+
+the number of neighbour is: 120
+the coverage is :0.998409331919
+the rmse is: 0.986824037289
+
+the number of neighbour is: 130
+the coverage is :0.998515376458
+the rmse is: 0.986858813347
+
+the number of neighbour is: 140
+the coverage is :0.998409331919
+the rmse is: 0.986831410987
+
+the number of neighbour is: 150
+the coverage is :0.998409331919
+the rmse is: 0.986811315832
+
+the number of neighbour is: 160
+the coverage is :0.998515376458
+the rmse is: 0.986845473764
+
+the number of neighbour is: 200
+the coverage is :0.998409331919
+the rmse is: 0.986849724081
+
+
+
+
+
+0.6the number of neighbour is: 10
+the coverage is :0.998621420997
+the rmse is: 0.987223451539
+
+the number of neighbour is: 20
+the coverage is :0.998515376458
+the rmse is: 0.986879979316
+
+the number of neighbour is: 30
+the coverage is :0.998515376458
+the rmse is: 0.986742427419
+
+the number of neighbour is: 40
+the coverage is :0.998409331919
+the rmse is: 0.98662228817
+
+the number of neighbour is: 50
+the coverage is :0.998409331919
+the rmse is: 0.986601377984
+
+the number of neighbour is: 60
+the coverage is :0.998409331919
+the rmse is: 0.986640193744
+
+the number of neighbour is: 70
+the coverage is :0.998515376458
+the rmse is: 0.986611790237
+
+the number of neighbour is: 80
+the coverage is :0.998515376458
+the rmse is: 0.98660605639
+
+the number of neighbour is: 90
+the coverage is :0.998409331919
+the rmse is: 0.986637912873
+
+the number of neighbour is: 100
+the coverage is :0.998515376458
+the rmse is: 0.986610943775
+
+the number of neighbour is: 110
+the coverage is :0.998409331919
+the rmse is: 0.986608200973
+
+the number of neighbour is: 120
+the coverage is :0.998409331919
+the rmse is: 0.98659331152
+
+the number of neighbour is: 130
+the coverage is :0.998515376458
+the rmse is: 0.986608477892
+
+the number of neighbour is: 140
+the coverage is :0.998409331919
+the rmse is: 0.986553967131
+
+the number of neighbour is: 150
+the coverage is :0.998409331919
+the rmse is: 0.986576093526
+
+the number of neighbour is: 160
+the coverage is :0.998409331919
+the rmse is: 0.986609712356
+
+the number of neighbour is: 200
+the coverage is :0.998409331919
+the rmse is: 0.986598892023
+
+
+
+
+
+0.7the number of neighbour is: 10
+the coverage is :0.998621420997
+the rmse is: 0.987255855915
+
+the number of neighbour is: 20
+the coverage is :0.998515376458
+the rmse is: 0.986769967363
+
+the number of neighbour is: 30
+the coverage is :0.998515376458
+the rmse is: 0.986735051409
+
+the number of neighbour is: 40
+the coverage is :0.998409331919
+the rmse is: 0.986545378452
+
+the number of neighbour is: 50
+the coverage is :0.998409331919
+the rmse is: 0.986457794422
+
+the number of neighbour is: 60
+the coverage is :0.998409331919
+the rmse is: 0.986578202387
+
+the number of neighbour is: 70
+the coverage is :0.998515376458
+the rmse is: 0.986527891599
+
+the number of neighbour is: 80
+the coverage is :0.998515376458
+the rmse is: 0.98655913497
+
+the number of neighbour is: 90
+the coverage is :0.998409331919
+the rmse is: 0.986606233057
+
+the number of neighbour is: 100
+the coverage is :0.998515376458
+the rmse is: 0.98658661944
+
+the number of neighbour is: 110
+the coverage is :0.998409331919
+the rmse is: 0.986567558133
+
+the number of neighbour is: 120
+the coverage is :0.998409331919
+the rmse is: 0.986531095655
+
+the number of neighbour is: 130
+the coverage is :0.998409331919
+the rmse is: 0.986538713933
+
+the number of neighbour is: 140
+the coverage is :0.998409331919
+the rmse is: 0.98649263774
+
+the number of neighbour is: 150
+the coverage is :0.998409331919
+the rmse is: 0.986556815113
+
+the number of neighbour is: 160
+the coverage is :0.998409331919
+the rmse is: 0.986561593309
+
+the number of neighbour is: 200
+the coverage is :0.998409331919
+the rmse is: 0.986537354626
+
+
+
+
+
+0.8the number of neighbour is: 10
+the coverage is :0.998621420997
+the rmse is: 0.986202395585
+
+the number of neighbour is: 20
+the coverage is :0.998515376458
+the rmse is: 0.98587000193
+
+the number of neighbour is: 30
+the coverage is :0.998515376458
+the rmse is: 0.985757061969
+
+the number of neighbour is: 40
+the coverage is :0.998515376458
+the rmse is: 0.985612766056
+
+the number of neighbour is: 50
+the coverage is :0.998409331919
+the rmse is: 0.985528192245
+
+the number of neighbour is: 60
+the coverage is :0.998409331919
+the rmse is: 0.98562450921
+
+the number of neighbour is: 70
+the coverage is :0.998515376458
+the rmse is: 0.985625906982
+
+the number of neighbour is: 80
+the coverage is :0.998515376458
+the rmse is: 0.985609776257
+
+the number of neighbour is: 90
+the coverage is :0.998409331919
+the rmse is: 0.985782303199
+
+the number of neighbour is: 100
+the coverage is :0.998515376458
+the rmse is: 0.985724137614
+
+the number of neighbour is: 110
+the coverage is :0.998409331919
+the rmse is: 0.985676869485
+
+the number of neighbour is: 120
+the coverage is :0.998409331919
+the rmse is: 0.985716586936
+
+the number of neighbour is: 130
+the coverage is :0.998409331919
+the rmse is: 0.985716710966
+
+the number of neighbour is: 140
+the coverage is :0.998409331919
+the rmse is: 0.985712661898
+
+the number of neighbour is: 150
+the coverage is :0.998409331919
+the rmse is: 0.98574705479
+
+the number of neighbour is: 160
+the coverage is :0.998409331919
+the rmse is: 0.98576402011
+
+the number of neighbour is: 200
+the coverage is :0.998409331919
+the rmse is: 0.985822707391
+
+
+
+
+
+0.9the number of neighbour is: 10
+the coverage is :0.998621420997
+the rmse is: 0.986474916338
+
+the number of neighbour is: 20
+the coverage is :0.998515376458
+the rmse is: 0.986203235885
+
+the number of neighbour is: 30
+the coverage is :0.998515376458
+the rmse is: 0.986042358055
+
+the number of neighbour is: 40
+the coverage is :0.998515376458
+the rmse is: 0.985948434837
+
+the number of neighbour is: 50
+the coverage is :0.998409331919
+the rmse is: 0.985803416387
+
+the number of neighbour is: 60
+the coverage is :0.998409331919
+the rmse is: 0.985874215817
+
+the number of neighbour is: 70
+the coverage is :0.998409331919
+the rmse is: 0.985832347599
+
+the number of neighbour is: 80
+the coverage is :0.998515376458
+the rmse is: 0.985816501978
+
+the number of neighbour is: 90
+the coverage is :0.998515376458
+the rmse is: 0.985973280083
+
+the number of neighbour is: 100
+the coverage is :0.998515376458
+the rmse is: 0.985916177088
+
+the number of neighbour is: 110
+the coverage is :0.998409331919
+the rmse is: 0.985892836214
+
+the number of neighbour is: 120
+the coverage is :0.998409331919
+the rmse is: 0.98582928969
+
+the number of neighbour is: 130
+the coverage is :0.998409331919
+the rmse is: 0.98587767093
+
+the number of neighbour is: 140
+the coverage is :0.998409331919
+the rmse is: 0.985887524871
+
+the number of neighbour is: 150
+the coverage is :0.998409331919
+the rmse is: 0.985887161932
+
+the number of neighbour is: 160
+the coverage is :0.998409331919
+the rmse is: 0.985915271538
+
+the number of neighbour is: 200
+the coverage is :0.998409331919
+the rmse is: 0.985916673764
+
+
+
+
+
+1the number of neighbour is: 10
+the coverage is :0.998621420997
+the rmse is: 0.986472043372
+
+the number of neighbour is: 20
+the coverage is :0.998515376458
+the rmse is: 0.986336033969
+
+the number of neighbour is: 30
+the coverage is :0.998515376458
+the rmse is: 0.986209635588
+
+the number of neighbour is: 40
+the coverage is :0.998515376458
+the rmse is: 0.986015207511
+
+the number of neighbour is: 50
+the coverage is :0.998409331919
+the rmse is: 0.985889958221
+
+the number of neighbour is: 60
+the coverage is :0.998409331919
+the rmse is: 0.985991598336
+
+the number of neighbour is: 70
+the coverage is :0.998409331919
+the rmse is: 0.985889693123
+
+the number of neighbour is: 80
+the coverage is :0.998515376458
+the rmse is: 0.985892807141
+
+the number of neighbour is: 90
+the coverage is :0.998515376458
+the rmse is: 0.986017555313
+
+the number of neighbour is: 100
+the coverage is :0.998515376458
+the rmse is: 0.985974351611
+
+the number of neighbour is: 110
+the coverage is :0.998409331919
+the rmse is: 0.985945220177
+
+the number of neighbour is: 120
+the coverage is :0.998409331919
+the rmse is: 0.985934593693
+
+the number of neighbour is: 130
+the coverage is :0.998409331919
+the rmse is: 0.985939559093
+
+the number of neighbour is: 140
+the coverage is :0.998409331919
+the rmse is: 0.98601539877
+
+the number of neighbour is: 150
+the coverage is :0.998409331919
+the rmse is: 0.985930447784
+
+the number of neighbour is: 160
+the coverage is :0.998409331919
+the rmse is: 0.98600776244
+
+the number of neighbour is: 200
+the coverage is :0.998409331919
+the rmse is: 0.985918037403
+
