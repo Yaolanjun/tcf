@@ -16,16 +16,16 @@ if __name__ == '__main__':
 
     ul=[10,20,30,40,50,60,70,80,90,100,200,300]
     il=[20,50,70,100,200,300,400,500,600,700,800,900]
-    '''print "\n\nthe user cf bagin :\n"
+    print "\n\nthe user cf bagin :\n"
     ucf = usercf.UserBasedCF()
     ucf.load_train_data(trainfile)
     ucf.load_test_data(testfile)
     ucf.get_sim_matrix()
     filename=r'/home/chen/yaoayao/train_3/usercf.txt'
-    for i1 in ul:ucf.rmse(i1,filename)'''
+    for i1 in ul:ucf.rmse(i1,filename)
 
     
-    '''print "\n\nthe item cf begin:\n"    
+    print "\n\nthe item cf begin:\n"    
     icf = itemcf.ItemBasedCF()
     icf.load_train_data(trainfile)
     icf.load_test_data(testfile)
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     picf.load_test_data(testfile)
     picf.get_sim_matrix()
     filename=r'/home/chen/yaoayao/train_3/improve_cos.txt'
-    for i3 in il:picf.rmse(i3,filename)'''
+    for i3 in il:picf.rmse(i3,filename)
 
     print "\n\nthe trust begin:\n"
     ticf = trust_itemcf.ItemBasedCF()
