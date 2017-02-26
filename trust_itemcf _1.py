@@ -20,7 +20,7 @@ class ItemBasedCF():
 
 
 
-        self.trust_neighbour=100
+        self.trust_neighbour=0.0
         self.alpha=0.0
 
 
@@ -188,9 +188,11 @@ class ItemBasedCF():
 
 
 
-    def get_indirect_matrix(self):
+    def get_indirect_matrix(self,count):
 
-        #self.trust_neighbour=count
+        
+
+        self.trust_neighbour=count
         for item in self.trans_prefs:
             if self.item_rating_count[item] >= self.alpha*self.item_ave: continue
             self.indirect_matrix.setdefault(item,{})
@@ -256,13 +258,10 @@ class ItemBasedCF():
 
 
     '''evaluate the performance with the RMSE'''
-    def rmse(self,nn,filename):
+    def rmse(self,filename):
         n=0.0
         sum_r=0.0
         total=0.0
-        self.n_sim_movie=nn
-
-
 
         for user in self.testset.keys():
             if user not in self.trainset: continue
@@ -279,7 +278,7 @@ class ItemBasedCF():
                     sum_r=sum_r+pow(self.testset[user][item]-rating,2)
 
         out=open(filename,'a')
-        out.write("the number of neighbour is: "+str(self.n_sim_movie))        
+        out.write("the number of neighbour is: "+str(self.trust_neighbour))        
         out.write("\nthe coverage is :"+str(n/total))
         out.write("\nthe rmse is: "+str(sqrt(sum_r/float(n))))
         out.write("\n\n")
